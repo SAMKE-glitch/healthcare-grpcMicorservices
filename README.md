@@ -33,13 +33,13 @@ healthcare-grpcMicorservices/
 
 ---
 ## 3. Build the Project
-    ### Generate Protobuf Code:
+### Generate Protobuf Code:
         ```bash
         cd common-proto  
         mvn clean install       # Generates Java classes from .proto files  
         ```
 
-    ### Build All Modules:
+### Build All Modules:
         ```
         cd ..  
         mvn clean install       # Builds patient, doctor, and appointment services  
