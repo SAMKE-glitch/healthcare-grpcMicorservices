@@ -66,3 +66,8 @@ Connect to PostgreSQL:
     Database: healthcare-app-db
     
     Username/Password: admin / admin
+---
+## 5. Run the Services
+Run all the 3 services for testing.
+
+Refer to this [Schema.sql](https://github.com/SAMKE-glitch/healthcare-grpcMicorservices/blob/main/schema.sql)
