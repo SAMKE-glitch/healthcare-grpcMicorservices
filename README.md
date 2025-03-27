@@ -70,4 +70,5 @@ Connect to PostgreSQL:
 ## 5. Run the Services
 Run all the 3 services for testing.
 
-Refer to this [Schema.sql](https://github.com/SAMKE-glitch/healthcare-grpcMicorservices/blob/main/schema.sql)
+Refer to this [Schema.sql](https://github.com/SAMKE-glitch/healthcare-grpcMicorservices/blob/main/schema.sql) to create Tables on your databases
+Refer to this [file](https://github.com/SAMKE-glitch/healthcare-grpcMicorservices/blob/main/TestingWalkThrough.md) when running queries either on your grpcurl for CLI Testing and grpcui for WebUI Testing,
