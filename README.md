@@ -13,6 +13,7 @@
     - **postman** 
 ---
 
+---
 ## 2. Project Setup
 ### Clone the Repository
 ```bash  
@@ -26,5 +27,21 @@ healthcare-grpcMicorservices/
 ├── patient-service/       # Patient registration and management  
 ├── doctor-service/        # Doctor data management  
 ├── appointment-service/   # Appointment booking and streaming  
-└── docker-compose.yml     # PostgreSQL and pgAdmin setup  
+└── compose.yml     # PostgreSQL and pgAdmin setup  
 ```
+---
+
+---
+## 3. Build the Project
+    ### Generate Protobuf Code:
+        ```bash
+        cd common-proto  
+        mvn clean install       # Generates Java classes from .proto files  
+        ```
+
+    ### Build All Modules:
+        ```
+        cd ..  
+        mvn clean install       # Builds patient, doctor, and appointment services  
+        ```
+---
