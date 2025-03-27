@@ -12,3 +12,9 @@
     - **grpcui** (Web UI): [Installation Guide](https://github.com/fullstorydev/grpcui)
     - **postman** 
 ---
+
+## 2. Project Setup
+### Clone the Repository
+```bash  
+git clone https://github.com/SAMKE-glitch/healthcare-grpcMicorservices.git  
+cd healthcare-grpcMicorservices 
