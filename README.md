@@ -78,13 +78,13 @@ Open http://localhost:8081/browser/ in your browser.
 Login with admin@example.com / password:admin.
 
 Connect to PostgreSQL:
-    Host: postgres (Docker service name)
+    - Host: postgres (Docker service name)
     
-    Port: 5432
+    - Port: 5432
     
-    Database: healthcare-app-db
+    - Database: healthcare-app-db
     
-    Username/Password: admin / admin
+    - Username/Password: admin / admin
 ---
 ## 5. Run the Services
 Run all the 3 services for testing.
