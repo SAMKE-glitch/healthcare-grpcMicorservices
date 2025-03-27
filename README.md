@@ -1,2 +1,2 @@
-# Project Documentation: Healthcare gRPC Microservices
+# Healthcare gRPC Microservices
 **GitHub Repository**: [healthcare-grpcMicroservices](https://github.com/SAMKE-glitch/healthcare-grpcMicorservices)  
