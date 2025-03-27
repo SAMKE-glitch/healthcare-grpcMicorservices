@@ -1,6 +1,25 @@
 # Healthcare gRPC Microservices
 **GitHub Repository**: [healthcare-grpcMicroservices](https://github.com/SAMKE-glitch/healthcare-grpcMicorservices)  
 
+
+---
+
+## **Overview**
+This project demonstrates a **high-performance microservices architecture** for a healthcare system, built using **gRPC**, **Java**, and **Spring Boot**. It showcases efficient communication between distributed services, leveraging Protocol Buffers for serialization and HTTP/2 for transport. Designed as a learning sample, it highlights:
+- **gRPC** for type-safe, low-latency service-to-service communication.
+- **Java 17** and **Spring Boot** for backend development and dependency injection.
+- **PostgreSQL** for persistent data storage, managed via **Docker** for simplicity.
+- **Maven** for multi-module project management and code generation.
+
+### **Key Features**
+- **Unary, Streaming, and Bidirectional RPCs**:
+    - Patient registration (Unary).
+    - Real-time appointment availability streaming (Server Streaming).
+    - Doctor-patient chat (Bidirectional Streaming).
+- **Strong API Contracts**: Enforced via `.proto` files.
+- **Scalability**: Containerized database and stateless services.
+
+---
 ---
 
 ## 1. Prerequisites
