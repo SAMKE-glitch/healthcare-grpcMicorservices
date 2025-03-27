@@ -5,19 +5,36 @@
 ---
 
 ## **Overview**
-This project demonstrates a **high-performance microservices architecture** for a healthcare system, built using **gRPC**, **Java**, and **Spring Boot**. It showcases efficient communication between distributed services, leveraging Protocol Buffers for serialization and HTTP/2 for transport. Designed as a learning sample, it highlights:
-- **gRPC** for type-safe, low-latency service-to-service communication.
-- **Java 17** and **Spring Boot** for backend development and dependency injection.
-- **PostgreSQL** for persistent data storage, managed via **Docker** for simplicity.
-- **Maven** for multi-module project management and code generation.
 
-### **Key Features**
-- **Unary, Streaming, and Bidirectional RPCs**:
-    - Patient registration (Unary).
-    - Real-time appointment availability streaming (Server Streaming).
-    - Doctor-patient chat (Bidirectional Streaming).
-- **Strong API Contracts**: Enforced via `.proto` files.
-- **Scalability**: Containerized database and stateless services.
+This project demonstrates a **high-performance microservices architecture** for a healthcare system, built using **gRPC**, **Java 17**, and **Spring Boot**. The design promotes efficient, type-safe, low-latency communication between distributed services through the use of Protocol Buffers and HTTP/2 transport. Additionally, it leverages industry-standard tools such as **PostgreSQL** (containerized via **Docker**) for data persistence and **Maven** for multi-module project management and code generation.
+
+### **Architectural Overview**
+The following diagram illustrates the overall microservices architecture, emphasizing the inter-service communication and the integration of various system components:
+
+![Microservices Architecture](SCREENSHOTS/microservices.png)
+
+---
+
+## **Key Features**
+
+- **RPC Communication Patterns**:
+  - **Unary RPCs**: Demonstrates efficient single-request single-response interactions, e.g., patient registration.
+  - **Server Streaming RPCs**: Enables real-time appointment availability updates by streaming data from server to client.
+  - **Bidirectional Streaming RPCs**: Supports interactive communication such as doctor-patient chat, where both parties can continuously send and receive messages.
+
+- **Strong API Contracts**: All interfaces are defined using `.proto` files to enforce consistency and compatibility across services.
+
+- **Scalability & Resilience**: The system leverages stateless microservices and containerized databases, ensuring it can scale horizontally and maintain high availability.
+
+### **gRPC Type Definitions**
+The project includes well-defined gRPC types to ensure robust service contracts. The image below provides a visual representation of the available gRPC types and their relationships:
+
+![gRPC Types](SCREENSHOTS/grpcTypes.png)
+
+### **Unary RPC Implementation**
+A specific example of a Unary RPC call is showcased for patient registration. This streamlined request-response interaction is pivotal for ensuring low-latency communication:
+
+![Unary RPC Example](SCREENSHOTS/unaryGRPC.png)
 
 ---
 ---
