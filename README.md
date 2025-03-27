@@ -45,3 +45,24 @@ healthcare-grpcMicorservices/
         mvn clean install       # Builds patient, doctor, and appointment services  
         ```
 ---
+
+## 4. Database Setup
+
+### 1. Start PostgreSQL and pgAdmin:
+    ```
+    docker-compose up -d    # Launches PostgreSQL (port 5432) and pgAdmin (port 8081)  
+    ```
+
+### 2. Access pgAdmin:
+Open http://localhost:8081/browser/ in your browser.
+
+Login with admin@example.com / password:admin.
+
+Connect to PostgreSQL:
+    Host: postgres (Docker service name)
+    
+    Port: 5432
+    
+    Database: healthcare-app-db
+    
+    Username/Password: admin / admin
