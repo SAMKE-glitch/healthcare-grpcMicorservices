@@ -18,3 +18,13 @@
 ```bash  
 git clone https://github.com/SAMKE-glitch/healthcare-grpcMicorservices.git  
 cd healthcare-grpcMicorservices 
+
+### Project Structure
+```bash 
+healthcare-grpcMicorservices/  
+├── common-proto/          # Shared Protocol Buffers definitions  
+├── patient-service/       # Patient registration and management  
+├── doctor-service/        # Doctor data management  
+├── appointment-service/   # Appointment booking and streaming  
+└── docker-compose.yml     # PostgreSQL and pgAdmin setup  
+```
