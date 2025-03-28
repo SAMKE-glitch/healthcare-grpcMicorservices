@@ -1,5 +1,7 @@
 package com.codewiz.service;
 
+import com.codewiz.appointment.AppointmentAvailabilityRequest;
+import com.codewiz.appointment.AppointmentAvailabilityResponse;
 import com.codewiz.appointment.BookAppointmentRequest;
 import com.codewiz.appointment.BookAppointmentResponse;
 import com.codewiz.doctor.DoctorDetailsRequest;
@@ -25,6 +27,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 
 @ExtendWith(MockitoExtension.class)
@@ -121,14 +125,33 @@ class AppointmentServiceTest {
     }
 
     @Test
-    void testGetAppointmentAvailabilitySuccess() {
+    void  testGetAppointmentAvailability() throws InterruptedException {
         // ARRANGE
 
+        // For Streaming responses using CountDownLatch to wait for the expected number of messages
+        CountDownLatch latch = new CountDownLatch(1);
+        TestStreamObserver<AppointmentAvailabilityResponse> responseTestStreamObserver = new TestStreamObserver<>(){
+            @Override
+            public void onCompleted() {
+                super.onCompleted();
+                latch.countDown();
+            }
+        };
 
         // ACT
+        appointmentService.getAppointmentAvailability(AppointmentAvailabilityRequest.newBuilder().build(), responseTestStreamObserver);
+        // wait for the stream to complete
 
 
         // ASSERT
+        boolean completed = latch.await(25, TimeUnit.SECONDS);
+        assertTrue(completed, "Stream did not complete in expected time");
+
+        // Assert that we received 10 responses as per the while Loop in getAppointmentAvailability
+        List<AppointmentAvailabilityResponse> responses =responseTestStreamObserver.getValues();
+        assertEquals(10, responses.size());
+        // Verify that each response has 2 appointment slots.
+        responses.forEach(response ->assertEquals(2, response.getResponsesCount()));
     }
 
     /**
