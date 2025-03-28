@@ -6,7 +6,7 @@
 
 ## **Overview**
 
-This project demonstrates a **high-performance microservices architecture** for a healthcare system, built using **gRPC**, **Java 17**, and **Spring Boot**. The design promotes efficient, type-safe, low-latency communication between distributed services through the use of Protocol Buffers and HTTP/2 transport. Additionally, it leverages industry-standard tools such as **PostgreSQL** (containerized via **Docker**) for data persistence and **Maven** for multi-module project management and code generation.
+This project demonstrates a **high-performance microservices architecture** for a healthcare system, built using **gRPC**, **Java 21**, and **Spring Boot**. The design promotes efficient, type-safe, low-latency communication between distributed services through the use of Protocol Buffers and HTTP/2 transport. Additionally, it leverages industry-standard tools such as **PostgreSQL** (containerized via **Docker**) for data persistence and **Maven** for multi-module project management and code generation.
 
 ### **Architectural Overview**
 The following diagram illustrates the overall microservices architecture, emphasizing the inter-service communication and the integration of various system components:
